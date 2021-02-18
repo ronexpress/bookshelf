@@ -5,6 +5,7 @@ import com.codecool.bookshelf.model.feedback.Opinion;
 import com.codecool.bookshelf.model.feedback.Rating;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class Customer {
     private String email;
     private List<Book> wish;
     private List<Rating> ratings;
-    private List<Opinion> opinions;
+    private List<Opinion> opinions = new ArrayList<>();
 
     public Customer(String name, String username, Date birthDate, String email, long id) {
         this.name = name;
